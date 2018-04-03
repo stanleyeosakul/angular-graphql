@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "../build",
+    "lib": [
+      "esnext.asynciterable",
+      "es2015"
+    ],
+    "module": "commonjs",
+    "target": "es6"
+  },
+  "include": ["./"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <h1 class="title">Web Development Courses</h1>
+        </div>
+        <div class="level-item">
+          <button class="button is-primary" (click)="goToCreateForm()">Add Course</button>
+        </div>
+      </div>
+    </nav>
+    <article class="message" *ngFor="let course of courses | async">
+      <app-item [course]=course></app-item>
+    </article>
+  </div>
+</section>

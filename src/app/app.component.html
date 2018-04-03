@@ -1,0 +1,5 @@
+<!-- Navbar -->
+<app-navbar (searchTermValue)="getSearchTerm($event)"></app-navbar>
+
+<!-- Course Display -->
+<app-list [searchTerm]="searchTerm"></app-list>

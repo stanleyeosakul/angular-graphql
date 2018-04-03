@@ -1,0 +1,35 @@
+<nav class="navbar is-light">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io" target="_blank">
+        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+      </a>
+      <div class="navbar-burger burger" [class.is-active]="burgerSwitch" (click)="toggleBurger()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="navbar-menu" [class.is-active]="burgerSwitch">
+      <div class="navbar-start"><a class="navbar-item">Home</a></div>
+      <div class="navbar-end">
+
+        <!-- Search Bar -->
+        <div class="navbar-item">
+          <form (ngSubmit)="inputValue(searchInput.value)">
+            <div class="field has-addons">
+              <div class="control has-icons-left">
+                <input class="input" name="searchInput" type="text" aria-label="Search" #searchInput>
+                <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+              </div>
+              <div class="control">
+                <button class="button is-link">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>

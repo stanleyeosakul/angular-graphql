@@ -1,0 +1,26 @@
+<div class="message-header">
+  <nav class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <div class="buttons has-addons">
+          <span class="button is-success" (click)="upvote(course.id)"><i class="fas fa-plus"></i></span>
+          <span class="button is-danger" (click)="downvote(course.id)"><i class="fas fa-minus"></i></span>
+        </div>
+      </div>
+      <div class="level-item">
+        <p><strong>Points: </strong>{{ course.voteCount }}</p>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="message-body">
+  <span class="tag is-link">{{ course.topic }}</span>
+  <h2 class="title is-4" style="margin-top: 10px"><strong>{{ course.title }}</strong></h2>
+  <h3 class="subtitle is-5"><strong>{{ course.author }}</strong></h3>
+  <p class="content">{{ course.description }}</p>
+  <a class="has-text-link" href="{{ course.url }}" target="_blank">Go to Course...</a><br>
+  <p style="text-align: right">
+    <a class="button is-primary" (click)="remove(course.id)">Remove Course</a>
+  </p>
+
+</div>
